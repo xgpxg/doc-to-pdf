@@ -10,7 +10,10 @@ pub fn set_libreoffice_root_dir(dir: &str) -> anyhow::Result<()> {
     }
     Ok(())
 }
-/// 将文件转换为 pdf
+
+/// 将docx、doc、xlsx、xls、pptx、ppt、csv格式的文件转换为pdf
+/// - src: 源文件路径
+/// - dest: 目标文件路径
 pub fn convert(src: &str, dest: &str) -> anyhow::Result<()> {
     let ext = Path::new(src).extension();
     if ext.is_none() {

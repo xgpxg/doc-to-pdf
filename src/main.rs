@@ -44,16 +44,12 @@ fn main() -> anyhow::Result<()> {
 
     let args = Args::parse();
 
-    println!(
-        "Converting {} to {}",
-        args.input.display(),
-        args.output.display()
-    );
+    println!("{} ===> {}", args.input.display(), args.output.display());
     convert(
         args.input.display().to_string().as_str(),
         args.output.display().to_string().as_str(),
     )?;
-    println!("✅ Done");
+    println!("Ok");
 
     Ok(())
 }

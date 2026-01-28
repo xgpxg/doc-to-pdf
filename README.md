@@ -20,6 +20,10 @@ git clone https://github.com/xgpxg/doc-to-pdf.git
 
 cd doc-to-pdf
 
+sudo mkdir -p /usr/include/LibreOfficeKit
+
+sudo cp -r ./include/LibreOfficeKit/* /usr/include/LibreOfficeKit
+
 cargo build -r
 ```
 
